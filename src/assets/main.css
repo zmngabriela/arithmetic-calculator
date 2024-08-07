@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+    width: 700px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: #f3c912;
+    font-size: 16px;
+}
+
+.inputs,
+.actions {
+    gap: 30px;
+    margin-top: 30px
+}
+
+input,
+select,
+button {
+    padding: 10px;
+    border-radius: 30px 30px;
+    width: 100px;
+    height: 36px;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+}
+
+select {
+    background-color: #f3c912;
+    border: none;
+}
+
+button {
+    background-color: rgb(86, 86, 82);
+    border: none;
+    display: flex;
+    justify-content: left;
+    padding-left: 15px;
+}
+
+button img {
+    height: 13px
+}
