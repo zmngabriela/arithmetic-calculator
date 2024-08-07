@@ -5,7 +5,7 @@
 <template>
     <div class="actions centered">
         <select @change="props.setOperator">
-            <option value="">Operador</option>
+            <option value="">Operator</option>
             <option value="somar">Somar</option>
             <option value="subtrair">Subtrair</option>
             <option value="dividir">Dividir</option>
