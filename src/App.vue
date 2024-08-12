@@ -49,7 +49,7 @@
 <template>
   <div class="container centered">
     <h2 :class="{ hidden: !state.isCalculated }">O resultado do cálculo é: {{ state.result }}</h2>
-    <Inputs :isCalculated="state.isCalculated" :result="state.result" :getNum1="evento => state.num1 = evento.target.value" :getNum2="evento => state.num2 = evento.target.value"></Inputs>
+    <Inputs :isCalculated="state.isCalculated" :result="state.result" :getNum1="evento => state.num1 = evento.target.value" :getNum2="evento => state.num2 = evento.target.value" :num1="state.num1" :num2="state.num2"></Inputs>
     <Actions :setOperator="setOperator" :restart="restart"></Actions>
   </div>
 </template>
