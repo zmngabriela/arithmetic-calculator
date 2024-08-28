@@ -15,20 +15,20 @@
     state.isCalculated = true;
 
     switch (state.operator) {
-      case 'somar':
+      case 'addition':
         state.result = Number(state.num1) + Number(state.num2);
         break;
-      case 'subtrair':
+      case 'subtraction':
         state.result = Number(state.num1) - Number(state.num2);
         break;
-      case 'dividir':
+      case 'division':
         state.result = Number(state.num1) / Number(state.num2);
         break;
-      case 'multiplicar':
+      case 'multiplication':
         state.result = Number(state.num1) * Number(state.num2);
         break;
       default:
-        state.result = 'Operação inválida'
+        state.result = 'Invalid operation'
     }
   }
 
@@ -48,8 +48,10 @@
 
 <template>
   <div class="container centered">
-    <h2 :class="{ hidden: !state.isCalculated }">O resultado do cálculo é: {{ state.result }}</h2>
-    <Inputs :isCalculated="state.isCalculated" :result="state.result" :getNum1="evento => state.num1 = evento.target.value" :getNum2="evento => state.num2 = evento.target.value" :num1="state.num1" :num2="state.num2"></Inputs>
+    <h2 :class="{ hidden: !state.isCalculated }">The result is: {{ state.result }}</h2>
+    <Inputs :isCalculated="state.isCalculated" :result="state.result"
+      :getNum1="evento => state.num1 = evento.target.value" :getNum2="evento => state.num2 = evento.target.value"
+      :num1="state.num1" :num2="state.num2"></Inputs>
     <Actions :setOperator="setOperator" :restart="restart"></Actions>
   </div>
 </template>
